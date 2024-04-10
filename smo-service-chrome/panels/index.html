@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SMO Service</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"  />
+    <link href="css/style.css" rel="stylesheet" type="text/css"  />
+
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://smoservice.media/support/" target="_blank">Support</a>
+      <a class="navbar-brand" href="https://smoservice.media/pages/promotion-free/" target="_blank">Affiliate program</a>
+    </div>
+  </nav>
+
+    <div id="wrapper">
+      <div class="accordion" id="accordionExample">
+    <div  class="accordion-item auth-block none" id="orderCreate">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <b>Create new order</b>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon7">Сategory of social</span>
+
+              <select class="form-select" name="root_categorical"  aria-label="Default select example" aria-describedby="basic-addon7">
+
+              </select>
+            </div>
+
+            <div id="actions" class="input-group mb-3 create-custom  none">
+              <span class="input-group-text" id="basic-addon8">Actions</span>
+
+              <select class="form-select" name="actions"  aria-label="Default select example" aria-describedby="basic-addon8">
+
+              </select>
+            </div>
+
+            <div id="tariff" class="input-group mb-3 create-custom  none">
+              <span class="input-group-text" id="basic-addon9">Tariff</span>
+
+              <select class="form-select" name="tariff"  aria-label="Default select example" aria-describedby="basic-addon9">
+
+              </select>
+            </div>
+
+
+            <div id="count" class="input-group mb-3 create-custom none">
+              <label for="customRange1" class="form-label">Count (<span class="minmax"></span>) <span class="selectspan"></span></label>
+              <input type="range" class="form-range" name="count" min="0" max="0">
+
+            </div>
+
+            <div id="amount" class="input-group mb-3 create-custom none">
+              <span class="input-group-text" id="basic-addon15">Toral Amount</span>
+              <input readonly  type="text" class="form-control" name="amount"  aria-describedby="basic-addon15">
+            </div>
+
+
+
+            <div id="link" class="input-group mb-3 create-custom none">
+              <span class="input-group-text" id="basic-addon15">Link</span>
+              <input placeholder="Enter Link"  type="text" class="form-control" name="link"  aria-describedby="basic-addon15">
+            </div>
+
+            <div id="validationCreateOrderFeedback" class="invalid-feedback"></div>
+            <button type="button" id="create" class="btn btn-primary create-custom none">Create</button>
+
+        </div>
+      </div>
+    </div>
+
+  <div  class="auth-block none accordion-item" id="lists">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      <b>Orders</b>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Count</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+
+      </div>
+    </div>
+  </div>
+  <div  class="accordion-item auth-block" id="auth">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <b>Auth</b>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3">User ID</span>
+            <input type="text" placeholder="User ID of your personal account" name="user_id"  class="form-control"  aria-describedby="basic-addon3">
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon5">API KEY</span>
+            <input placeholder="API KEY of your personal account"  type="text" class="form-control" name="api_key"  aria-describedby="basic-addon5">
+          </div>
+
+          <div id="validationAuthFeedback" class="invalid-feedback"></div>
+          <button type="button" id="Authorization" class="btn btn-primary">Login</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <div class="preload none">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
